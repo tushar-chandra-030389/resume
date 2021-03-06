@@ -1,0 +1,162 @@
+.intro {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+        flex: 0 0 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        @include heading-primary;
+    }
+
+    &__details {
+        align-self: flex-start;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $color-primary-dark;
+        // color: $color-grey-dark;
+        transform: translateX(-2rem);
+        padding: 1rem 10rem 1rem 2rem;
+
+        @include box-shadow-1;
+    }
+
+    &__detail {
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+        }
+        &--email {
+        }
+
+        &--phone {
+        }
+
+        &--location {
+        }
+    }
+
+    &__brief {
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+
+    &__right {
+        flex: 0 0 20%;
+    }
+
+    &__profile {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: red;
+        position: relative;
+        
+
+        &::after {
+            content: "";
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background-color: $color-white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transform: scale(1.10);
+        }
+    }   
+
+    &__profile-pic {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 200;
+    }
+}
+
+
+.profile {
+   display: flex;
+   justify-content: space-between;
+   padding: 2rem;
+
+   &__experience {
+        flex: 0 0 65%;
+   }
+
+   &__skills {
+        flex: 0 0 30%;
+   }
+
+   &__heading {
+        @include heading-secondary;
+   }
+}
+
+.company {
+    &__header {
+        margin-left: -2rem;
+        margin-top: 1rem;
+        padding: 0 1rem 0 2rem;
+
+        background-color: $color-primary-dark;;
+        // color:  $color-grey-dark;
+
+        display: flex;
+        justify-content: space-between;
+
+        @include box-shadow-1;
+    }
+
+    &__name {
+
+    }
+
+    &__tenure {
+
+    }
+
+    &__location {
+        
+    }
+}
+
+.project {
+    margin-top: 1rem;
+    transform: all .1s;
+    padding: 1rem;
+
+    &:hover {
+        transform: scale(1.01);
+        background-color: rgba($color: $color-white, $alpha: .1)
+    }
+
+    &__name {
+        @include heading-tertiary;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        
+        &::before {
+            width: 3rem;
+            height: 3rem;
+            content: "\003E";
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        & div {
+            display: inline-block;
+            width: 90%;
+        }
+    }
+}
+
+   

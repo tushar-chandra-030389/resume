@@ -1,0 +1,17 @@
+@mixin heading-primary {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+@mixin heading-secondary {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+@mixin heading-tertiary {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
