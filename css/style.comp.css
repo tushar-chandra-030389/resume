@@ -2,7 +2,7 @@
   0% {
     transform: scale(1.02); }
   50% {
-    transform: scale(1.05); }
+    transform: scale(1.06); }
   100% {
     transform: scale(1.02); } }
 
@@ -26,7 +26,6 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6 rem;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #333; }
   @media only screen and (max-width: 75em) {
@@ -114,7 +113,23 @@ body {
       .intro__details-box {
         align-items: center; } }
   .intro__detail:not(:last-child) {
-    padding-bottom: 1rem; }
+    margin-bottom: 1rem; }
+  .intro__detail--email {
+    border-bottom: 1px solid #fff; }
+    .intro__detail--email > a {
+      text-decoration: none;
+      color: #333;
+      color: #fff; }
+  .intro__detail--phone {
+    align-self: flex-start;
+    border-bottom: 1px solid #fff; }
+    .intro__detail--phone > a {
+      text-decoration: none;
+      color: #333;
+      color: #fff; }
+    @media only screen and (max-width: 26.25em) {
+      .intro__detail--phone {
+        align-self: center; } }
   .intro__brief {
     font-size: 2rem;
     padding: 2rem 0; }

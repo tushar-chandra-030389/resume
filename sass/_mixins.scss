@@ -6,6 +6,10 @@
     border-bottom: 1px solid $color-text-primary;
 }
 
+@mixin border-bottom-thin-2 {
+    border-bottom: 1px solid $color-text-secondary;
+}
+
 @mixin reset-links {
     text-decoration: none;
     color: $color-text-primary;

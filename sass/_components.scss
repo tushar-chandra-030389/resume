@@ -91,13 +91,31 @@
 
     &__detail {
         &:not(:last-child) {
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
         }
         
         &--email {
+            @include border-bottom-thin-2;
+
+            & > a {
+                @include reset-links;
+                color: $color-text-secondary;
+            }
         }
 
         &--phone {
+            align-self: flex-start;
+
+            @include border-bottom-thin-2;
+
+            & > a {
+                @include reset-links;
+                color: $color-text-secondary;
+            }
+
+            @media only screen and (max-width: $break-point-small) {
+                align-self: center;
+            }
         }
 
         &--location {
