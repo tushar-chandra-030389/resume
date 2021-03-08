@@ -2,7 +2,7 @@
   0% {
     transform: scale(1.02); }
   50% {
-    transform: scale(1.06); }
+    transform: scale(1.1); }
   100% {
     transform: scale(1.02); } }
 
@@ -40,8 +40,6 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   background-color: #fff;
-  background-image: linear-gradient(to top right, rgba(119, 119, 119, 0.1), rgba(153, 153, 153, 0.1));
-  background-size: cover;
   outline: 1rem solid #349956;
   outline-offset: 2rem; }
   @media only screen and (max-width: 75em) {
@@ -167,7 +165,11 @@ body {
       @media only screen and (max-width: 56.25em) {
         .intro__profile::after {
           width: 10rem;
-          height: 10rem; } }
+          height: 10rem;
+          background-color: #fff; } }
+      @media only screen and (max-width: 26.25em) {
+        .intro__profile::after {
+          background-color: #349956; } }
     @media only screen and (max-width: 75em) {
       .intro__profile {
         width: 15rem;

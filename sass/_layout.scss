@@ -4,11 +4,9 @@
 
     background-color: $color-white;
 
-    background-image:
-        linear-gradient(to top right, rgba($color-grey-dark, .1), rgba($color-grey-dark-2, .1));
+    // background-image:
+    //     linear-gradient(to top right, rgba($color-grey-dark, .1), rgba($color-grey-dark-2, .1));
     
-    background-size: cover;
-
     @media only screen and (max-width: $break-point-large) {
         margin: 0 0;
     }
