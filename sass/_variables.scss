@@ -16,3 +16,9 @@ $color-white: #fff;
 $color-black: #000;
 
 $default-font-size: 1.6rem;
+
+$box-shadow-1: 0 0.4rem .6rem rgba($color: $color-black, $alpha: 0.4);
+$box-shadow-2: 0 .5rem .6rem rgba($color: $color-black, $alpha: 0.4);
+
+$break-point-large: 75em; // 1200 / 16
+$break-point-medium: 50em; // 800 / 16

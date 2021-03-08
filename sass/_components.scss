@@ -7,17 +7,35 @@
         flex: 0 0 80%;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $break-point-large) {
+            flex: 0 0 75%;
+        }
+
+        @media only screen and (max-width: $break-point-medium) {
+            padding: 0;
+
+            flex: 0 0 100%;
+            align-items: stretch;
+        }
     }
 
     &__name {
         @include heading-primary;
+
+        &--link:link,
+        &--link:visited {
+            @include reset-links;
+            @include border-bottom-thin;
+        }
+
+        @media only screen and (max-width: $break-point-medium) {
+            text-align: center;
+        }
     }
 
     &__details {
         align-self: flex-start;
-
-        display: flex;
-        flex-direction: column;
 
         background-color: $color-primary-dark;
         // color: $color-grey-dark;
@@ -25,12 +43,36 @@
         padding: 1rem 10rem 1rem 2rem;
 
         @include box-shadow-1;
+
+        @media only screen and (max-width: $break-point-medium) {
+            align-self: stretch;
+            transform: translateX(0);
+
+            display: flex;
+            justify-content: space-between;
+
+            padding: 1rem 2rem 1rem 2rem;
+        }
+    }
+
+    &__details &__profile {
+        display: none;
+
+        @media only screen and (max-width: $break-point-medium) {
+            display: block;
+        }
+    }
+
+    &__details-box {
+        display: flex;
+        flex-direction: column;
     }
 
     &__detail {
         &:not(:last-child) {
             padding-bottom: 1rem;
         }
+        
         &--email {
         }
 
@@ -44,17 +86,22 @@
     &__brief {
         font-size: 2rem;
         padding: 2rem 0;
+
+        @media only screen and (max-width: $break-point-medium) {
+            text-align: justify;
+        }
     }
 
     &__right {
-        flex: 0 0 20%;
+       @media only screen and (max-width: $break-point-medium) {
+           display: none;
+       }
     }
 
     &__profile {
         width: 20rem;
         height: 20rem;
         border-radius: 50%;
-        background-color: red;
         position: relative;
         
 
@@ -68,7 +115,31 @@
             top: 0;
             left: 0;
             z-index: 100;
-            transform: scale(1.10);
+            transform: scale(1.05);
+
+            @media only screen and (max-width: $break-point-large) {
+                width: 15rem;
+                height: 15rem;
+            }
+
+            @media only screen and (max-width: $break-point-medium) {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        &:hover::after {
+            animation: pulsate 1s infinite;
+        }
+
+        @media only screen and (max-width: $break-point-large) {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        @media only screen and (max-width: $break-point-medium) {
+            width: 10rem;
+            height: 10rem;
         }
     }   
 
@@ -82,21 +153,44 @@
 
 
 .profile {
-   display: flex;
-   justify-content: space-between;
-   padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 
-   &__experience {
+    @media only screen and (max-width: $break-point-medium) {
+        flex-direction: column;
+    }
+
+    &--left {
         flex: 0 0 65%;
-   }
+    }
 
-   &__skills {
+    &--right {
         flex: 0 0 30%;
-   }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-   &__heading {
+    &__experience {
+        
+    }
+
+    &__skills {
+        @media only screen and (max-width: $break-point-medium) {
+            margin-top: 6rem;
+        }
+    }
+
+    &__education {
+        @media only screen and (max-width: $break-point-medium) {
+            margin-top: 6rem;
+        }
+    }
+
+    &__heading {
         @include heading-secondary;
-   }
+    }
 }
 
 .company {
@@ -112,6 +206,10 @@
         justify-content: space-between;
 
         @include box-shadow-1;
+
+        @media only screen and (max-width: $break-point-medium) {
+            margin-left: 0;
+        }
     }
 
     &__name {
@@ -156,6 +254,84 @@
             display: inline-block;
             width: 90%;
         }
+    }
+}
+
+
+.skills {
+    margin-top: 2rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media only screen and (max-width: $break-point-medium) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__box {
+        cursor: default;
+        filter: drop-shadow($box-shadow-2);
+
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__item {      
+        font-size: 1.8rem; 
+        background-color: $color-primary-dark;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: all .2s;
+        padding: 1rem 1rem 1rem 5rem;
+        margin-right: -2rem;
+
+        &:hover {
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+            padding-left: 8rem;
+
+            @media only screen and (max-width: $break-point-medium) {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                padding-left: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: $break-point-medium) {
+            padding: 1rem 1rem 1rem 1rem;
+            margin-right: 0;
+        }
+    }
+
+}
+
+.education {
+    &__header {
+        margin-top: 1rem;
+        padding: 0 1rem 0 2rem;
+
+        background-color: $color-primary-dark;
+
+        display: flex;
+        justify-content: space-between;
+
+        @include box-shadow-1;
+
+        @media only screen and (max-width: $break-point-medium) {
+            margin-left: 0;
+        }
+    }
+
+    &__institute {
+        margin-top: .5rem;
+    }
+
+    &__institute-name {
+        
     }
 }
 

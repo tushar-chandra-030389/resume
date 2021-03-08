@@ -1,7 +1,17 @@
 .container {
     max-width: 120rem;
-    min-height: 100rem;
     margin: 0 auto;
 
     background-color: $color-primary;
+
+    background-image:
+        linear-gradient(to top right, rgba($color-primary, .95), rgba($color-primary-dark, .95)),
+        url(./../img/background-bw.jpg);
+    
+    background-size: cover;
+    // background-blend-mode: screen;
+
+    @media only screen and (max-width: $break-point-large) {
+        margin: 0 0;
+    }
 }
