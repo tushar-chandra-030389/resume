@@ -116,14 +116,18 @@ body {
     margin-bottom: 1rem; }
   .intro__detail--email {
     border-bottom: 1px solid #fff; }
-    .intro__detail--email > a {
+    .intro__detail--email > a,
+    .intro__detail--email > a:link,
+    .intro__detail--email > a:visited {
       text-decoration: none;
       color: #333;
       color: #fff; }
   .intro__detail--phone {
     align-self: flex-start;
     border-bottom: 1px solid #fff; }
-    .intro__detail--phone > a {
+    .intro__detail--phone > a,
+    .intro__detail--phone > a:link,
+    .intro__detail--phone > a:visited {
       text-decoration: none;
       color: #333;
       color: #fff; }
