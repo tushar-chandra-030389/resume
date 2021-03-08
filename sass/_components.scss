@@ -97,7 +97,9 @@
         &--email {
             @include border-bottom-thin-2;
 
-            & > a {
+            & > a,
+            & > a:link,
+            & > a:visited {
                 @include reset-links;
                 color: $color-text-secondary;
             }
@@ -108,7 +110,9 @@
 
             @include border-bottom-thin-2;
 
-            & > a {
+            & > a,
+            & > a:link,
+            & > a:visited {
                 @include reset-links;
                 color: $color-text-secondary;
             }
