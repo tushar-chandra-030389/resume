@@ -47,7 +47,7 @@
         align-self: flex-start;
 
         background-color: $color-primary-dark;
-        // color: $color-grey-dark;
+        color: $color-text-secondary;
         transform: translateX(-2rem);
         padding: 1rem 10rem 1rem 2rem;
 
@@ -131,12 +131,14 @@
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
-            background-color: $color-white;
+            background-color: $color-primary-dark;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 100;
-            transform: scale(1.05);
+            transform: scale(1.02);
+
+            animation: pulsate 5s infinite 2s;
 
             @media only screen and (max-width: $break-point-large) {
                 width: 15rem;
@@ -147,10 +149,6 @@
                 width: 10rem;
                 height: 10rem;
             }
-        }
-
-        &:hover::after {
-            animation: pulsate 1s infinite;
         }
 
         @media only screen and (max-width: $break-point-large) {
@@ -221,7 +219,7 @@
         padding: 0 1rem 0 2rem;
 
         background-color: $color-primary-dark;;
-        // color:  $color-grey-dark;
+        color:  $color-text-secondary;
 
         display: flex;
         justify-content: space-between;
@@ -259,7 +257,7 @@
 
     &:hover {
         transform: scale(1.01);
-        background-color: rgba($color: $color-white, $alpha: .1)
+        background-color: rgba($color: $color-text-primary, $alpha: .1)
     }
 
     &__name {
@@ -287,6 +285,7 @@
 
 .skills {
     margin-top: 2rem;
+    color: $color-text-secondary;
 
     &__container {
         display: flex;
@@ -310,7 +309,10 @@
         }
 
         @media only screen and (max-width: $break-point-medium) {
-            margin: 0 1rem 2rem 1rem;
+            margin-bottom: 2rem;
+
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 

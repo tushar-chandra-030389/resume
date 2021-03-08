@@ -2,16 +2,17 @@
     max-width: 120rem;
     margin: 0 auto;
 
-    background-color: $color-primary;
+    background-color: $color-white;
 
     background-image:
-        linear-gradient(to top right, rgba($color-primary, .95), rgba($color-primary-dark, .95)),
-        url(./../img/background-bw.jpg);
+        linear-gradient(to top right, rgba($color-grey-dark, .1), rgba($color-grey-dark-2, .1));
     
     background-size: cover;
-    // background-blend-mode: screen;
 
     @media only screen and (max-width: $break-point-large) {
         margin: 0 0;
     }
+
+    outline: 1rem solid $color-primary-dark;
+    outline-offset: 2rem;
 }
