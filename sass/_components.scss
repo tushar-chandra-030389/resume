@@ -122,7 +122,25 @@
             }
         }
 
-        &--location {
+        &--linkedin {
+            display: none;
+            align-self: flex-start;
+            @include border-bottom-thin-2;
+
+            & > a,
+            & > a:link,
+            & > a:visited {
+                @include reset-links;
+                color: $color-text-secondary;
+            }
+
+            @media only screen and (max-width: $break-point-medium) {
+                display: inline-block;
+            }
+
+            @media only screen and (max-width: $break-point-small) {
+                align-self: center;
+            }
         }
     }
 
@@ -139,6 +157,11 @@
        @media only screen and (max-width: $break-point-medium) {
            display: none;
        }
+
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
     }
 
     &__profile {
@@ -168,8 +191,8 @@
             }
 
             @media only screen and (max-width: $break-point-medium) {
-                width: 10rem;
-                height: 10rem;
+                width: 14rem;
+                height: 14rem;
 
                 background-color: $color-white;
             }
@@ -185,10 +208,19 @@
         }
 
         @media only screen and (max-width: $break-point-medium) {
-            width: 10rem;
-            height: 10rem;
+            width: 14rem;
+            height: 14rem;
         }
     }   
+
+    &__linkedin {
+        a:link,
+        a:visited {
+            @include reset-links;
+        }
+        margin-top: 1rem;
+        border-bottom: 1px solid $color-text-primary;
+    }
 
     &__profile-pic {
         width: 100%;
